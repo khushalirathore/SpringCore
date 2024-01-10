@@ -1,0 +1,47 @@
+package in.com.rays.test;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
+
+import in.com.rays.dto.UserDTO;
+import in.com.rays.service.UserServiceInt;
+
+@Component("TestUserService")
+public class TestUserService {
+
+	
+	@Autowired
+	public UserServiceInt service = null;
+
+	public static void main(String[] args) throws Exception {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+
+		TestUserService test = (TestUserService) context.getBean("TestUserService");
+
+		 test.testAdd();
+		// test.testUpdate();
+		// test.testDelete();
+		//test.testFindByPk();
+		// test.testAuth();
+		// test.testSearch();
+
+	}
+
+	public void testAdd() {
+		UserDTO dto = new UserDTO();
+		dto.setId(1);
+		dto.setFirstName("khushali");
+		dto.setLastName("rat");
+		dto.setLogin("xyz@gmail.com");
+		dto.setPassword("pass1234");
+		long pk = service.add(dto);
+		System.out.println("Data Inserted... pk = " + pk);
+	}
+	}
+
+	

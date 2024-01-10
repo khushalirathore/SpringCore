@@ -1,0 +1,15 @@
+package com.rays.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
+
+@Component("testUserService")
+public class TestUserService {
+	
+	public static ApplicationContext context = null;
+	
+	
+	
+	
+
+}

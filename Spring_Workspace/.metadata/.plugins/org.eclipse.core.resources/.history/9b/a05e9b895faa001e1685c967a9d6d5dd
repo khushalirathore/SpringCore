@@ -1,0 +1,11 @@
+package com.rays.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+public class UserDTO {
+	
+	@Entity
+	@Table(name = "USER")
+
+}

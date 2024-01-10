@@ -1,0 +1,21 @@
+package com.rays.test;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
+
+import com.rays.service.UserServiceInt;
+
+@Component("testUserService")
+public class TestUserService {
+	
+	public static ApplicationContext context = null;
+	
+	@Autowired 
+	public UserServiceInt service = null;
+	public static void main(String[] args )throws Exception{
+		
+	}
+	
+
+}
